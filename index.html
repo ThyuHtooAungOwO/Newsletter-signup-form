@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="newsletter-container">
+      <div class="signup-card" id="signupCard">
+        <div class="signup-illustration">
+          <picture>
+            <source
+              media="(min-width: 40em)"
+              srcset="./assets/images/illustration-sign-up-desktop.svg"
+            />
+            <img
+              src="./assets/images/illustration-sign-up-mobile.svg"
+              alt="Illustration of product updates dashboard"
+              class="signup-image"
+            />
+          </picture>
+        </div>
+        <div class="signup-content">
+          <h1 class="signup-title">Stay updated!</h1>
+          <p class="signup-description">
+            Join 60,000+ product managers receiving monthly updates on:
+          </p>
+          <ul class="feature-list">
+            <li>
+              <img
+                src="./assets/images/icon-list.svg"
+                alt=""
+                aria-hidden="true"
+              />
+              Product discovery and building what matters
+            </li>
+            <li>
+              <img
+                src="./assets/images/icon-list.svg"
+                alt=""
+                aria-hidden="true"
+              />
+              Measuring to ensure updates are a success
+            </li>
+            <li>
+              <img
+                src="./assets/images/icon-list.svg"
+                alt=""
+                aria-hidden="true"
+              />
+              And much more!
+            </li>
+          </ul>
+          <form class="signup-form" id="signupForm" novalidate>
+            <div class="form-group">
+              <div class="label-row">
+                <label for="email" class="form-label">Email address</label>
+                <span class="error-message hidden" id="emailErrorMessage"
+                  >Please enter a valid email address</span
+                >
+              </div>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="email@company.com"
+                class="form-input"
+                aria-describedby="emailErrorMessage"
+                aria-invalid="false"
+                required
+              />
+            </div>
+            <button type="submit" class="submit-button">
+              Subscribe to monthly newsletter
+            </button>
+          </form>
+        </div>
+      </div>
+      <!-- Initially Hidden  -->
+      <div class="success-card hidden" id="successCard" aria-live="polite">
+        <img
+          src="./assets/images/icon-success.svg"
+          alt="Success icon"
+          class="success-icon"
+        />
+        <h1 class="success-title">Thanks for subscribing!</h1>
+        <p class="success-message-text">
+          A confirmation email has been sent to
+          <strong id="subscribedEmail"></strong>. Please open it and click the
+          button inside to confirm your subscription.
+        </p>
+        <button type="button" class="dismiss-button" id="dismissButton">
+          Dismiss message
+        </button>
+      </div>
+    </main>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">PoungMont</a>.
+    </footer>
+  </body>
+</html>
